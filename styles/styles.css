@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+    color: #eee;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+#name{
+    position:absolute;
+    top: 4em;
+}
+
+hr{
+    color:#eee;
+    width:100%;
+    position:absolute;
+    top:9em;
+    height:4px;
+    color:#eee;
+    background:#eee;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+}
+
+#highest_score{
+    text-align: center;
+    color: #222;
+    display: flex;
+    justify-content: center;
+}
+
+#highest_score_box{
+    position: absolute;
+    top: 8em;
+    width: 415px;
+    height: 40px;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #222;
+}
+
+#restart{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 160px;
+    background-color: #222;
+    color: #eee;
+    box-shadow: 4px 4px #bbb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dis-none{
+    visibility: hidden;
+}
+
+#game{
+    width: 700px;
+    height: 200px;
+    border: 2px solid #000;
+    background: #999;
+    border-radius: 20px 20px 0 0;
+}
+
+#score{
+    position: relative;
+    top: 15px;
+    left: 490px;
+    width: 100px;
+    color: #222;
+}
+
+#character{
+    width: 20px;
+    height: 50px;
+    background-color: red;
+    position: relative;
+    top: 134px;
+    left: 50px;
+}
+
+.animate{
+    animation: jump .5s linear infinite;
+}
+
+@keyframes jump {
+    0%{top:134px}
+    50%{top: 80px;}
+    65%{top: 80px;}
+    100%{top: 134px;}
+}
+
+#block{
+    width: 20px;
+    height: 20px;
+    background: #000;
+    position: relative;
+    top: 114px;
+    left:680px;
+}
+
+.anime{
+    animation:block 0.5s linear infinite;
+}
+
+@keyframes block {
+    0%{left:680px;}
+    100%{left:0px}
+}
+
+@media only screen and (max-width:600px)
+{
+    #game{
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    hr{
+        top:11em;
+    }
+
+    #highest_score_box{
+        top: 10em;
+    }
+
+    #hscr{
+        font-size: 20px;
+    }
+
+    #character{
+        left: 20px;
+    }
+
+    #name{
+        text-align: center;
+    }
+
+    #score{
+        left: 50vw;
+        width: fit-content;
+        color: #222;
+    }
+}
+
+@media only screen and (max-width:800px)
+{
+    #hscr{
+        font-size: 22px;
+    }
+}
