@@ -1,9 +1,23 @@
+let win=document.getElementById("win");
+let died=document.getElementById("died");
 let character=document.getElementById("character");
 let block=document.getElementById("block");
 let restart=document.getElementById("restart");
 let score=document.getElementById("score");
 let highscore=document.getElementById("hscr");
-var i=4,scr=0,hscr=0;
+// let celebration=document.getElementById("celebration");
+// let gameover=document.getElementById("game_over");
+// let highscore_gif=document.getElementById("high_score");
+var i=3,scr=0,hscr=0,j=.5;
+
+function playAudio() { 
+    win.play(); 
+}
+
+function playDieAudio() { 
+    died.play(); 
+}
+
 if(JSON.parse(localStorage.getItem("high_score")))
 {
     hscr=JSON.parse(localStorage.getItem("high_score"));
@@ -21,7 +35,7 @@ function jump(){
     }
     setTimeout(function(){
         character.classList.remove("animate");
-    },500)
+    },400)
 }
 
 let check=setInterval(function(){
@@ -36,6 +50,13 @@ let check=setInterval(function(){
             highscore.textContent="High Score:"+scr.toFixed(2);
             localStorage.setItem("high_score", JSON.stringify(scr.toFixed(2)));
             console.log("inside if",JSON.parse(localStorage.getItem("high_score")));
+            playAudio();
+            // celebration.classList.remove("dis-none")
+            // highscore_gif.classList.remove("dis-none")
+        }
+        else{
+            // gameover.classList.remove("dis-none")
+            playDieAudio();
         }
     }
 },10)
@@ -46,9 +67,9 @@ function myFunction(){
 
 setInterval(function(){
     block.style.animationDuration = i+"s";
-    i=i-0.001;
+    i=i-0.0005;
     scr+=0.1;
     if(restart.classList=="dis-none"){
-    score.textContent="Score:"+scr.toFixed(2);
+        score.textContent="Score:"+scr.toFixed(2);
     }
 },30)
