@@ -139,6 +139,7 @@ hr{
     }
 
     #highest_score_box{
+        text-align:center ;
         top: 10em;
         width: fit-content;
     }

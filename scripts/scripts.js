@@ -7,7 +7,7 @@ var i=4,scr=0,hscr=0;
 if(JSON.parse(localStorage.getItem("high_score")))
 {
     hscr=JSON.parse(localStorage.getItem("high_score"));
-    highscore.textContent="High Score:"+hscr;
+    highscore.textContent="High Score: "+hscr;
     console.log(JSON.parse(localStorage.getItem("high_score")));
 }
 
