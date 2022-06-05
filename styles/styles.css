@@ -6,7 +6,7 @@
 }
 
 body{
-    height: 100vh;
+    height: 100vh; 
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -140,14 +140,15 @@ hr{
 
     #highest_score_box{
         top: 10em;
+        width: fit-content;
+    }
+
+    #highest_score_box{
+        top: 10em;
     }
 
     #hscr{
         font-size: 20px;
-    }
-
-    #character{
-        left: 20px;
     }
 
     #name{
