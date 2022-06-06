@@ -53,7 +53,9 @@ let check=setInterval(function(){
             playAudio();
             // celebration.classList.remove("dis-none")
             // highscore_gif.classList.remove("dis-none")
-            alert("New High-Score!!");
+            setTimeout(() => {
+                alert("New High-Score!!");
+            }, 10); 
         }
         else{
             // gameover.classList.remove("dis-none")
