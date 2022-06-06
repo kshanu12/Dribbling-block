@@ -55,7 +55,7 @@ let check=setInterval(function(){
             // highscore_gif.classList.remove("dis-none")
             setTimeout(() => {
                 alert("New High-Score!!");
-            }, 10); 
+            }, 100); 
         }
         else{
             // gameover.classList.remove("dis-none")
